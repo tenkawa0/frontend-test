@@ -11,7 +11,7 @@ import {
   CircularProgress,
   Typography,
 } from "@mui/material";
-import { Delete } from "@mui/icons-material";
+import { DeleteForever } from "@mui/icons-material";
 import dayjs from "dayjs";
 
 import { CompleteTodoButton } from "./CompleteTodoButton";
@@ -50,7 +50,7 @@ export const TodoList: React.FC = () => {
                 aria-label="delete-todo"
                 onClick={() => alert("削除機能を入れるつもりだった・・・")}
               >
-                <Delete />
+                <DeleteForever />
               </IconButton>
             }
           >
