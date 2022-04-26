@@ -41,12 +41,6 @@ API のモックは MSW を使用します。<br />
 `stories/work1/sample.stories.tsx`にサンプルを掲載しています。
 
 - 画面の初期表示は fetch が成功・失敗したときの表示や、fetch 中の表示を確認します
-- Storybook の play function という機能を使用します
-  - https://storybook.js.org/docs/react/writing-tests/interaction-testing
-  - https://storybook.js.org/blog/interaction-testing-with-storybook/
-- play function を使ってテストコードを作成するには`testing library`, `jest`, `WAI-ARIA`の知識が必要です
-
-> WAI-ARIA については以下の動画が参考になります。<br /> https://www.youtube.com/watch?v=ZLL0_W5w1vo&t=782s
 
 <br />
 
@@ -55,6 +49,13 @@ API のモックは MSW を使用します。<br />
 ### ユーザ操作の確認
 
 次に、ユーザ操作のテストを作成します<br />
+Storybook の play function という機能を使用します
+- https://storybook.js.org/docs/react/writing-tests/interaction-testing
+- https://storybook.js.org/blog/interaction-testing-with-storybook/
+- play function を使ってテストコードを作成するには`testing library`, `jest`, `WAI-ARIA`の知識が必要です
+
+> WAI-ARIA については以下の動画が参考になります。<br /> https://www.youtube.com/watch?v=ZLL0_W5w1vo&t=782s
+
 `stories/work2/sample.stories.tsx`にサンプルを掲載しています。
 
 - Todo を追加する際の一連の操作を確認します
