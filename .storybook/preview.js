@@ -23,6 +23,7 @@ export const parameters = {
     },
   },
   msw: { handlers: handlers },
+  chromatic: { disableSnapshot: true },
 };
 
 export const decorators = [

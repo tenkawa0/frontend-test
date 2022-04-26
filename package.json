@@ -19,6 +19,7 @@
     "@types/react": "^18.0.5",
     "@types/react-dom": "^18.0.1",
     "axios": "^0.26.1",
+    "chromatic": "^6.5.4",
     "dayjs": "^1.11.1",
     "jest": "^27.5.1",
     "material-ui-popup-state": "^2.0.0",
@@ -39,7 +40,8 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "test-storybook": "test-storybook"
+    "test-storybook": "test-storybook",
+    "chromatic": "chromatic --exit-zero-on-changes"
   },
   "eslintConfig": {
     "extends": [

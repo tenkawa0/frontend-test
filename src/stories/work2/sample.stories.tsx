@@ -51,6 +51,9 @@ InputDueDate.play = async (context) => {
 
 export const Submit = Template.bind({});
 Submit.storyName = "Todo追加(成功)";
+Submit.parameters = {
+  chromatic: { disableSnapshot: false },
+};
 Submit.play = async (context) => {
   await InputTodo.play?.(context);
   await userEvent.click(screen.getByRole("button", { name: "submit-todo" }));
@@ -69,6 +72,7 @@ Submit.play = async (context) => {
 export const SubmitError = Template.bind({});
 SubmitError.storyName = "Todo追加(失敗)";
 SubmitError.parameters = {
+  chromatic: { disableSnapshot: false },
   msw: {
     handlers: {
       postTodos: rest.post("*/todo", (req, res, ctx) => {
