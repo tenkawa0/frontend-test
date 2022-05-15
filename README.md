@@ -1,7 +1,7 @@
 # React + MSW + Storybook で始めるフロントエンドテストハンズオン
 
 1. [はじめに](#intro)
-1. [Storybook で Integration Test を書く方法](#work)
+1. [Integration Test を書く方法](#work)
    1. [画面の初期表示](#work1)
    1. [ユーザ操作の確認](#work2)
    1. [テストランナーの実行](#work3)
@@ -22,7 +22,7 @@ Integration Test とは「コンポーネントを組み合わせて操作した
 
 <a id="work" ></a>
 
-## Storybook で Integration Test を書く方法
+## Integration Test を書く方法
 
 環境構築の方法は割愛。<br />
 本リポジトリでは環境構築済みなので、`yarn && yarn storybook || npm install && npm run storybook` で Storybook を立ち上げてください。<br />
@@ -31,9 +31,9 @@ Integration Test とは「コンポーネントを組み合わせて操作した
 
 <a id="work1" ></a>
 
-### 画面の初期表示
+## 画面の初期表示
 
-まずはじめに、API からデータを fetch する画面の初期表示テストを作成します。<br />
+まずはじめに、API からデータを fetch する画面の表示パターンを確認します。<br />
 API のモックは MSW を使用します。<br />
 
 > MSW については以下の記事が参考になります。<br /> https://zenn.dev/takepepe/articles/msw-driven-development
@@ -49,17 +49,17 @@ API のモックは MSW を使用します。<br />
 ### ユーザ操作の確認
 
 次に、ユーザ操作のテストを作成します<br />
-Storybook の play function という機能を使用します
-- https://storybook.js.org/docs/react/writing-tests/interaction-testing
-- https://storybook.js.org/blog/interaction-testing-with-storybook/
-- play function を使ってテストコードを作成するには`testing library`, `jest`, `WAI-ARIA`の知識が必要です
-
-> WAI-ARIA については以下の動画が参考になります。<br /> https://www.youtube.com/watch?v=ZLL0_W5w1vo&t=782s
-
 `stories/work2/sample.stories.tsx`にサンプルを掲載しています。
 
 - Todo を追加する際の一連の操作を確認します
   - 余力がある人は、Todo を完了する際の操作も確認してみましょう
+- Storybook の play function という機能を使用します
+  - https://storybook.js.org/docs/react/writing-tests/interaction-testing
+  - https://storybook.js.org/blog/interaction-testing-with-storybook/
+- play function を使ってテストコードを作成するには`testing library`, `jest`, `WAI-ARIA`の知識が必要です
+
+> WAI-ARIA については以下の動画が参考になります。<br /> https://www.youtube.com/watch?v=ZLL0_W5w1vo&t=782s
+
 - `testing library`は priority guide を参照しましょう
   - https://testing-library.com/docs/queries/about#priority
 - `await`しているのにテストが成功しないときは `waitFor` を使いましょう

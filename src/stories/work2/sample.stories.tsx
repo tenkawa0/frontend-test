@@ -38,17 +38,6 @@ InputTodo.play = async (context) => {
   await expect(screen.getByLabelText("Todo Title")).toHaveValue(title);
 };
 
-export const InputDueDate = Template.bind({});
-InputDueDate.storyName = "期日の入力";
-InputDueDate.play = async (context) => {
-  await OpenPopup.play?.(context);
-  await userEvent.click(screen.getByRole("button", { name: /Choose date/ }));
-  await waitFor(() =>
-    userEvent.click(screen.getByRole("button", { name: "Apr 22, 2022" }))
-  );
-  await expect(screen.getByText("2022/04/22")).toBeInTheDocument();
-};
-
 export const Submit = Template.bind({});
 Submit.storyName = "Todo追加(成功)";
 Submit.parameters = {
